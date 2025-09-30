@@ -1,33 +1,34 @@
 # YouTube-Clone
-A simple YouTube homepage clone built with HTML &amp; CSS for practicing responsive web design.
+A responsive YouTube clone UI built using HTML, CSS, Bootstrap 5, and Font Awesome, featuring a navbar with search, sidebar categories, explore section, and video cards with local video playback.
 
-A simple YouTube Homepage Clone built using HTML and CSS. This project focuses on practicing front-end design skills by replicating YouTube’s basic layout.
+# YouTube Clone – Frontend Project
+This project is a static frontend clone of YouTube built using HTML5, CSS3, Bootstrap 5, and Font Awesome. The interface includes a responsive navigation bar, sidebar with categories, and a dynamic content section displaying videos as cards. Each video card contains a thumbnail, title, and description, with support for local video playback.
 
-# 🔹 Features
+ # Key Features:
 
-Responsive design for desktop & mobile
+Responsive Bootstrap 5 layout with grid system.
 
-Navbar with logo, search bar, and profile icons
+Navigation bar with search functionality and sign-in button.
 
-Sidebar menu (Home, Trending, Subscriptions, Library, etc.)
+Sidebar menu including sections like Home, Shorts, Subscriptions, History, Playlists, etc.
 
-Video grid layout with thumbnails, titles, and channel details
+Explore section with trending categories (Music, Gaming, News, Sports, etc.).
 
-Clean and structured UI using Flexbox & CSS Grid
+Video cards with thumbnails and titles, linking to locally stored .mp4 files.
 
-# 🛠️ Tech Stack
+Icons integrated using Font Awesome 6.
 
-HTML5 – For website structure
+Custom scrollbar hidden using CSS.
 
-CSS3 – For styling and responsive layout
+# Tech Stack:
 
-# 📌 Learning Outcomes
+HTML5
 
-Hands-on practice with HTML & CSS
+CSS3
 
-Understanding page layouts using Flexbox & Grid
+Bootstrap 5
 
-Improved skills in responsive design and UI/UX concepts
+Font Awesome 6
 
 
 📷 Preview
