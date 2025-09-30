@@ -32,4 +32,4 @@ Improved skills in responsive design and UI/UX concepts
 
 📷 Preview
 
-(Add a screensho
+https://github.com/CodingwithAnkit-tech/YouTube-Clone/blob/main/Screenshot%202025-10-01%20005047.png
