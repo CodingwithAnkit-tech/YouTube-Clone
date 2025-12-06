@@ -1,36 +1,67 @@
-# YouTube-Clone
-A responsive YouTube clone UI built using HTML, CSS, Bootstrap 5, and Font Awesome, featuring a navbar with search, sidebar categories, explore section, and video cards with local video playback.
-
-# YouTube Clone – Frontend Project
-This project is a static frontend clone of YouTube built using HTML5, CSS3, Bootstrap 5, and Font Awesome. The interface includes a responsive navigation bar, sidebar with categories, and a dynamic content section displaying videos as cards. Each video card contains a thumbnail, title, and description, with support for local video playback.
-
- # Key Features:
-
-Responsive Bootstrap 5 layout with grid system.
-
-Navigation bar with search functionality and sign-in button.
-
-Sidebar menu including sections like Home, Shorts, Subscriptions, History, Playlists, etc.
-
-Explore section with trending categories (Music, Gaming, News, Sports, etc.).
-
-Video cards with thumbnails and titles, linking to locally stored .mp4 files.
-
-Icons integrated using Font Awesome 6.
-
-Custom scrollbar hidden using CSS.
-
-# Tech Stack:
-
-HTML5
-
-CSS3
-
-Bootstrap 5
-
-Font Awesome 6
+# Youtube Clone
 
 
-📷 Preview
+# Static Website Deployment Flow  
 
-https://github.com/CodingwithAnkit-tech/YouTube-Clone/blob/main/Screenshot%202025-10-01%20005047.png
+This project demonstrates how static assets (**HTML, CSS, JS, Images, and Videos**) are served to clients via a **Static Host** (e.g., Nginx, GitHub Pages) and optimized using a **CDN (Cache Layer)** for performance.  
+
+## 📌 Architecture Diagram  
+
+![diagram](diagram.png)  
+
+## 📖 How It Works  
+
+1. **Client Request**  
+   - Browser requests the entry point:  
+     ```http
+     GET /index.html
+     ```
+
+2. **CDN (Cache Layer)**  
+   - If cached → returns `200 OK + index.html`.  
+   - If not cached → forwards the request to the static host.
+
+3. **Static Host (Nginx / GitHub Pages)**  
+   - Stores and serves static files:  
+     - HTML Pages  
+     - CSS (e.g., `bootstrap.css`)  
+     - JS (e.g., `bootstrap.bundle.js`)  
+     - Images (`img/`, `img1/`)  
+     - Videos (`.mp4`)  
+
+4. **Browser Parses HTML**  
+   - After receiving `index.html`, the browser parses it and sends additional requests for assets inside the HTML.
+
+5. **Asset Fetching**  
+   - CSS → `GET css/bootstrap.css`  
+   - JS → `GET js/bootstrap.bundle.js`  
+   - Images → `GET img/*`, `GET img1/*`  
+   - Videos → `GET video/*.mp4`  
+
+6. **Response Flow**  
+   - CSS → `200 OK + bootstrap.css`  
+   - JS → `200 OK + bootstrap.bundle.js`  
+   - Images → `200 OK + img files`  
+   - Videos → `200 OK + mp4 files`  
+
+## 📂 File Types Served  
+
+- **HTML Pages** → `index.html`  
+- **CSS** → `bootstrap.css`  
+- **JavaScript** → `bootstrap.bundle.js`  
+- **Images** → `img/, img1/`  
+- **Videos** → `Radhe Govinda.mp4`, `Rait Zara Si.mp4`, `Pal.mp4`  
+
+
+
+## ✅ Benefits  
+
+- Faster loading with **CDN caching**  
+- Efficient asset delivery  
+- Scalable and reliable static hosting  
+- Reduced server load due to cache hits  
+
+---
+
+👉 This README explains the **flow of static assets** from **host → CDN → browser** for optimized website performance.  
+
