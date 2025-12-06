@@ -1,15 +1,16 @@
 # Youtube Clone
-
+---
 
 # Static Website Deployment Flow  
-
+---
 This project demonstrates how static assets (**HTML, CSS, JS, Images, and Videos**) are served to clients via a **Static Host** (e.g., Nginx, GitHub Pages) and optimized using a **CDN (Cache Layer)** for performance.  
 
-## 📌 Architecture Diagram  
-
+## 📌 Architecture Diagram 
+---
 ![diagram](diagram.png)  
 
 ## 📖 How It Works  
+---
 
 1. **Client Request**  
    - Browser requests the entry point:  
@@ -45,6 +46,7 @@ This project demonstrates how static assets (**HTML, CSS, JS, Images, and Videos
    - Videos → `200 OK + mp4 files`  
 
 ## 📂 File Types Served  
+---
 
 - **HTML Pages** → `index.html`  
 - **CSS** → `bootstrap.css`  
@@ -55,6 +57,7 @@ This project demonstrates how static assets (**HTML, CSS, JS, Images, and Videos
 
 
 ## ✅ Benefits  
+---
 
 - Faster loading with **CDN caching**  
 - Efficient asset delivery  
