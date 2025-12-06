@@ -1,432 +1,329 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>You Tube</title>
-    <link rel="shortcut icon" href="./img/youtube.png" type="image/x-icon">
+    <title>Youtube</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/youtube.png" type="img/x-icon">
     <style>
         .scroll::-webkit-scrollbar{
-            display: none;
+            display: inline;
+
         }
-    </style>
+    
+      .custom-search-bar {
+          width: 600px;
+          
+          border-radius: 50px;
+          border: 1px solid #ccc;
+          display: flex;
+          align-items: center;
+          background-color: #fff;
+          overflow: hidden;
+      }
 
-  </head>
-  <body>
+      .custom-search-bar input {
+          border: none;
+          flex-grow: 1;
+          padding: 10px 15px;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+          outline: none;
+      }
 
-    <!-- Outer Start -->
-    <div class="container-fluid">
+      .custom-search-bar input::placeholder {
+          color: #999;
+      }
+
+      .custom-search-bar .search-icon {
+          background-color: transparent;
+          border: none;
+          padding: 0 15px;
+          display: flex;
+          align-items: center;
+      }
+
+      .custom-search-bar .search-icon i {
+          font-size: 1.4rem;
+          color: #333;
+      }
+
+      .custom-search-bar .search-icon:hover {
+          cursor: pointer;
+          color: #000;
+      }
+
+      /* Separate Mic Icon Positioned Outside */
+      .mic-container {
+          margin-left: 1px;
+      }
+
+      .mic-container .mic-icon {
+          background-color: #f1f1f1;
+          border-radius: 50%;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+      }
+
+      .mic-container .mic-icon i {
+          font-size: 1.4rem;
+          color: #333;
+      }
+
+      .mic-container .mic-icon:hover {
+          cursor: pointer;
+          background-color: #e1e1e1;
+      }
+      .im:hover{
+        background-color: #333;
+        color: #e1e1e1;
+      }
+  </style>
+</head>
+<body>
+    <!-- outer start -->
+    <div class="container-fluid">          
         <!-- top row start -->
-         <div class="row sticky-top bg-white" style="height: 8vh;">
-            <div class="col-sm-2 fs-4 my-auto" >
-                <i class="fa-solid fa-bars"></i> <i class="fa-brands fa-youtube ps-3" style="color: #e40707;"></i> <b>YouTube </b> <sup>IN</sup>
-            </div>
-            <div class="col-sm-6  mx-auto ">
-                <form class="d-flex w-60 mx-auto">
-                <input class="form-control my-2 me-3  rounded-5" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-secondary my-2 rounded-5">Search</button>
-                </form>
-            </div>
-            <div class="col-sm-2 "><button class="btn btn-outline-secondary my-2 ms-5 rounded-5 text-primary"><b>Sign in</b></button></div>
+        <div class="row sticky-top" style="height: 8vh;background: #fbfafa;">
+            <div class="col-sm-2  fs-4 my-auto"><i class="fa-solid fa-bars"></i>&nbsp;<i class="fa-brands ps-3 fa-youtube" style="color: #df0707;"></i>&nbsp;<b>Youtube</b><Sup>IN</Sup></div>
+            <div class="col-sm-6 mx-auto ">
+                
+
+              <div class="container my-2">
+                  <div class="d-flex justify-content-center align-items-center">
+                      <!-- Search Bar -->
+                      <div class="custom-search-bar">
+                          <input type="text" placeholder="Search">
+                          <span class="search-icon">
+                              <img src="./img/search.png" alt="">
+                          </span>
+                      </div>
+                      <!-- Mic Icon Outside -->
+                      <div class="mic-container">
+                          <div class="mic-icon">
+                              <img src="./img/mic.png" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div> 
+
+
+            <div class="col-sm-2 "> <img src="./img/create.png" alt="" class="mx-3"> <img src="./img/notification-bell.png" alt="" class="mx-3"><button class="btn btn-outline-secondary my-2  mx-3 rounded-5 text-primary"><b>Sign in</b></button></div>
         </div>
         <!-- top row end -->
-         <!-- main row start  -->
-          <div class="row" style="height: 92vh;">
-            <div class="col-2  text-black scroll" style="overflow-y: scroll; height:92vh;">
-                <ul type="none" class="pt-5">
-                    <li>
-                        <a href="" class="nav-link"><i class="fa-solid fa-house me-3"></i>Home</a>
-                    </li>
-                    <li class="pt-4">
-                     <a href=""class="nav-link"><i class="fa-solid fa-fire me-3"></i>Shorts</a>
-                    </li>
-                    <li class="pt-4">
-                     <a href=""class="nav-link"><i class="fa-solid fa-tablet-button me-3"></i>Subscription</a>
-                    </li>
-                    <hr>
-                    <li class="pt-4">
-                        <a href=""class="nav-link"><i class="fa-brands fa-square-youtube me-3"></i>You ></a>
-                    </li>
-                    <li class="pt-4">
-                        <a href=""class="nav-link"><i class="fa-solid fa-clock-rotate-left me-3"></i>History</a>
-                    </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-brands fa-google-play me-3"></i>Playlists</a>
-                        </li>
-                    
-                        <li class="pt-4" >
-                            <a href=""class="nav-link"><i class="fa-regular fa-clock me-3 me-3"></i>Watch Later</i></a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-regular fa-thumbs-up me-3"></i>Liked Videos</i></a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-download me-3"></i>Download</i></a>
-                        </li>
-                    </ul><hr>
-                    <h3>Subscription</h3>
-                    <ul type="none" class="pt-2">
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-brands fa-facebook me-3"></i>Facebook</a>
-                        </li>
-                        <li class="pt-4"></li>
-                            <a href=""class="nav-link"><i class="fa-brands fa-instagram me-3"></i>Instagram</a>
-                        </li>
-                        <li class="pt-4"></li>
-                            <a href=""class="nav-link"><i class="fa-brands fa-linkedin me-3"></i>Linkdin</a>
-                        </li>
-                        <li class="pt-4"></li>
-                        <a href=""class="nav-link"><i class="fa-brands fa-x-twitter me-3"></i>Twitter</a>
-                    </li>
-                    </ul><hr>
-                    <h3>Explore</h3>
-                    <ul type="none" class="pt-2">
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-fire me-3"></i>Trending</i></a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-bag-shopping me-3"></i>Shopping</a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-music me-3"></i>Music</a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-clapperboard me-3"></i>Film</a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-wifi me-3"></i>Live</a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-gamepad me-3"></i>Gaming</a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-regular fa-newspaper me-3"></i>News</a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-trophy me-3"></i>Sport</a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-regular fa-lightbulb me-3"></i>Courses</a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-chart-simple me-3"></i>Fashion & Beauty</a>
-                        </li>
-                        <li class="pt-4">
-                            <a href=""class="nav-link"><i class="fa-solid fa-podcast me-3"></i>Podcasts</i></a>
-                            </li>
+         <!-- main  -->
+        <div class="row" style="height: 92vh;">
+            <div class="col-2 bg-light text-black scroll" style="overflow-y: scroll;  height: 92vh;">
+                <ul type="none" class="pt-2">
+                    <li class="py-1 my-3   "><a href="" class="nav-link"><i class="fa-solid fa-house me-4"></i> Home</a></li>
+                    <li class="py-1 my-3 "><a href="" class="nav-link "> <img src="./img/shorts.png" height="24px" width="24px" alt="" class="me-4">Shorts</a></li>
+                        <li class="py-1 my-3 "><a href="" class="nav-link"><img src="./img/subscribe (1).png" height="24px" width="24px" alt="" class="me-4"> Subscriptions</a></li>
+                        <hr style="height:4px;background-color:rgb(0, 0, 0)">
+                        <span class="mx-2 my-5 "><b style="font-size:20px;">You</b></span>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/person.png" height="24px" width="24px" alt="" class="me-4"> Your Channel</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/history.png" height="24px" width="24px" alt="" class="me-4"> History</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/playlist.png" height="24px" width="24px" alt="" class="me-4"> Playlists</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/player.png" height="24px" width="24px" alt="" class="me-4"> Your Videos</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/tips.png" height="24px" width="24px" alt="" class="me-4"> Your Courses</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/clock.png" height="24px" width="24px" alt="" class="me-4"> Watch Later</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/like.png" height="24px" width="24px" alt="" class="me-4"> Liked Videos</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/download.png" height="24px" width="24px" alt="" class="me-4"> Downloads</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/clip.png" height="24px" width="24px" alt="" class="me-4"> Your clips</a></li>
+                        <hr style="height:7px;background-color:rgb(0, 0, 0)">
+                        <span class="mx-2 my-5 "><b style="font-size:20px;">Explore</b></span>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/trending.png" height="24px" width="24px" alt="" class="me-4"> Trending</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/shopping.png" height="24px" width="24px" alt="" class="me-4"> Shopping</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/music.png" height="24px" width="24px" alt="" class="me-4"> Music</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/movies.png" height="24px" width="24px" alt="" class="me-4"> Movies</a></li>
+                        <li class="py-1 my-3  "><a href="" class="nav-link"><img src="./img/live.png" height="24px" width="24px" alt="" class="me-4"> Live</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/gaming.png" height="24px" width="24px" alt="" class="me-4"> Gaming</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/news.png" height="24px" width="24px" alt="" class="me-4"> News</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/sports.png" height="24px" width="24px" alt="" class="me-4"> Sports</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/tips.png" height="24px" width="24px" alt="" class="me-4"> Courses</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/fashion.png" height="24px" width="24px" alt="" class="me-4"> Fashion & Beauty</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/podcast.png" height="24px" width="24px" alt="" class="me-4"> Podcasts</a></li>
+                        <hr style="height:7px;background-color:rgb(0, 0, 0)">
+                        <span class="mx-0 my-5 "><b style="font-size:16px;">More From Youtube</b></span>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/youtube.png" height="20px" width="24px" alt="" class="me-4">Youtube Premium</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/ystudio.png" height="24px" width="24px" alt="" class="me-4"> Youtube Studio</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/ymusic.png" height="24px" width="24px" alt="" class="me-4"> Youtube Music</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/kids.png" height="20px" width="24px" alt="" class="me-4">Youtube kids</a></li>
+                        <hr style="height:4px;background-color:rgb(0, 0, 0)">
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/settings.png" height="20px" width="24px" alt=""class="me-4">Settings</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/repo.png" height="24px" width="24px" alt="" class="me-4"> Report History</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/help.png" height="24px" width="24px" alt="" class="me-4"> Help</a></li>
+                        <li class="py-1 my-3   "><a href="" class="nav-link"><img src="./img/feedback.png" height="20px" width="24px" alt="" class="me-4">Send Feedback</a></li>
+                        
 
-                    </ul><hr>
-                   <h4>More from YouTube</h4>
-                   <ul type="none" class="pt-2">
-                    <li class="pt-4">
-                        <a href=""class="nav-link"><i class="fa-brands fa-youtube bg-danger me-3 "></i>Youtube Premium</i></a>
-                    </li>
-                    <li  class="pt-4">
-                        <a href=""class="nav-link"><i class="fa-solid fa-video bg-danger me-3"></i>Youtube Studio</a>
-                    </li>
-                    <li class="pt-4">
-                        <a href=""class="nav-link"><i class="fa-solid fa-music bg-danger me-3"></i>Youtube Music</a>
-                    </li>
-                    <li class="pt-4">
-                        <a href=""class="nav-link"><i class="fa-brands fa-square-youtube bg-danger me-3"></i>Youtube kids</a>
-                    </li>
-                    <hr>
-                    <li class="pt-4">
-                        <a href=""class="nav-link"><i class="fa-solid fa-gear me-3"></i>Setting</a>
-                            </li>
-                            <li  class="pt-4">
-                                <a href=""class="nav-link"><i class="fa-regular fa-flag me-3"></i>Report</a>
-                            </li>
-                             <li  class="pt-4">
-                                <a href=""class="nav-link"><i class="fa-solid fa-circle-question me-3 "></i>Help</a>
-                                </li>
-                                <li  class="pt-4">
-                                    <a href=""class="nav-link"><i class="fa-solid fa-comment me-3"></i>Feedback</a>
-                                    </li>
-    
 
-                   </ul>
-                    
+                </ul>
+                <hr style="height:4px;background-color:rgb(0, 0, 0)">
+                <br><br><br>
+                <b  class="text-black" style="justify-content:center;"> About Press Copyright Contact us Creators Advertise Developer <br><br> Terms PrivacyPolicy & SafetyHow YouTube worksTest new features
+                <br> <br>
+                © 2024 Google LLC</b>
             </div>
-            <div class="col-10 bg-light text-light h-100">
-            <div class="d-flex p-2 bg-light py-2 mt-2 " style="overflow: auto;">
-            <p class="px-2 bg-white text-black mx-1 my-auto">ALL</p>
-            <p class="px-2 bg-white text-black my-auto">Bhojpuri</p>
-            <p class="px-2 bg-white text-black my-auto">Mixes</p>
-            <p class="px-2 bg-white text-black mx-1 my-auto">Live</p>
-            <p class="px-2 bg-white text-black mx-1 my-auto">Developmebt</p>
-            <p class="px-2 bg-white text-black my-auto">Movie</p>
-            <p class="px-2 bg-white text-black mx-1 my-auto">Song</p>
-            <p class="px-2 bg-white text-black my-auto">Media</p>
-            <p class="px-2 bg-white text-black my-auto"> English</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Css</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Skills</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Dubbing</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Action</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Mixex</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">DS</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">New</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Recently</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Letest</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Java</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">HTML</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">TAFL</p>
-            <p class="px-2 bg-white mx-1 text-black  my-auto">College</p>
-            <p class="px-2 bg-white mx-1  text-black my-auto">Comedy</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">WWE</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Artist</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Bhakti</p>
-            <p class="px-2 bg-white mx-1  text-black my-auto">Video</p>
-            <p class="px-2 bg-white mx-1  text-black my-auto">Moyu</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto" >Cartoon</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto"> Tamil</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Hariyanvi</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">Panjabi</p>
-            <p class="px-2 bg-white mx-1 text-black my-auto">GANA</p>
-            
-            </div>
-
-            
-            <div class="row row-cols-1 row-cols-md-4 text-black g-4" style="overflow-y: scroll;  height: 82vh;">
-                <div class="col">
-                  <div class="card h-100">
-                    <a href ="video/videoplayback (1).mp4" target_blank> <img src="./img/ekQLGA2xHgk-HD.jpg"class="card-img-top" alt=".."></a>
-                    <div class="card-body">
-                      <h5 class="card-title">Watch this before you start Coding!</h5>
-                      <p class="card-text">Watch this before you start Coding! | 10 Tips for Coders</p>
-                    </div>
-                  </div>
+            <div class="col-10 bg-white text-light h-100">
+                <div class="d-flex p-2  py-2 mt-2 scroll" style="overflow: auto;height: 10vh;">
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">All</button></p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">Movies</button></p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">songs</button> </</p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">news</button> </</p>
+                    <p class="px-2 my-auto mx-1 "> <button class=" im border border-0 rounded-2">drama</button></</p>
+                    <p class="px-2 my-auto mx-1 "> <button class=" im border border-0 rounded-2">Indipop</button></</p>
+                    <p class="px-2 my-auto mx-1 "> <button class=" im border border-0 rounded-2">live</button></</p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">Ankit</button></ </p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">R2H</button></</p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">BBkiVines</button></</p>
+                    <p class="px-2 my-auto mx-1 "> <button class=" im  border border-0 rounded-2">Shreyians</button></</p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">Mrbeast</button></</p>
+                    <p class="px-2 my-auto mx-1 "><button class="im border border-0 rounded-2">wscubetech</button></p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">letest</button></p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">Action </button></p>
+                    <p class="px-2 my-auto mx-1 "><button class="im border border-0 rounded-2">Amit </button> </p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">lakshaya </button></p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">Fukra </button></p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">Triggered </button></p>
+                    <p class="px-2 my-auto mx-1 "> <button class="im border border-0 rounded-2">Ashish </button></p>
                 </div>
-
-                <div class="col">
-                  <div class="card h-100">
-                    <a href ="video/Radhe Govinda.mp4" target_blank> <img src="./img/YxWlaYCA8MU-HD (2).jpg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                      <h5 class="card-title">Jhoome Jo Pathaan Song </h5>
-                      <p class="card-text">Jhoome Jo Pathaan Song | Shah Rukh Khan, Deepika | Vishal & Sheykhar, Arijit Singh, Sukriti, Kumaar</p>
+                
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 bg-white text-black scroll" style="overflow: auto;height: 82vh;" >
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="./img/ads.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Selling Fee Reduction on Amazon.in</h5>
+                          <p class="card-text">Sell on India's most visited shopping destination with reduced selling <br>
+                            <b>Sponsored</b>. Amazon Seller Services</p>
+                        </div>
+                      </div>
                     </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="player1.html" target="_blank"><img src="./img/panchayat.jpg" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <img src="./img/tvf.png"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">Tower ke liye Meeting Meeting</b>
+                          <p class="card-text">Tower Ke Liye Meeting Meeting ft. Chandan Roy, Faisal Malik, Durgesh Kumar, Ashok Pathak</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="player2.html" target="_blank"><img src="./img/lofi1.jpg" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <img src="./img/lofi11.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">Rait Zara Si</b>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="player3.html" target="_blank"><img src="./img/bb.jpg" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <img src="./img/bb2.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">BB Ki Vines | Angry Masterji Part 16</b>
+                          <p class="card-text">Bhuvan, Bablooji and Sameer visit Bubbly sir to discuss Bhuvan's career plans. </p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="player4.html" target="_blank"><img src="./img/radhe.jpg" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <img src="./img/narci.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">Radhe Govinda | Narci | Acyuta Gopi (Prod. By Narci)</b>
+                          <p class="card-text">ORIGINAL BHAJAN: Radhe Govinda By Acyuta Gopi</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="player5.html" target="_blank"><img src="./img/surma.png" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                            <img src="./img/gurur.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">Surma Surma | ft. Guru Randhawa</b>
+                          <p class="card-text">gururandhawa #slowedandreverb #lofi Surma Surma - Slowed & Reverb - Guru Randhawa / Jay Sean Singer: Guru Randhawa ft. Jay Sean</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                          <a href="https://www.youtube.com/watch?v=eaOUpdKUa" target="_blank"><img src="./img/inlove.png" class="card-img-top" alt="..."></a>
+                          <div class="card-body">
+                            <img src="./img/gurur.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">In Love | Lofi</b>
+                            <p class="card-text">In Love - Slowed & Reverb - Guru Randhawa X Raja Kumari</p>
+                          </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <a href="https://www.youtube.com/watch?v=YIECFZb1IxQ" target="_blank"><img src="./img/r2h.jpg" class="card-img-top" alt="..."></a>
+                        <div class="card-body">
+                          <img src="./img/net.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">Character goes Desi | Ft. Round2Hell</b>
+                          <p class="card-text">‪@Round2hell‬ Baney Desi Heart Ke Agents? | Heart of Stone | Netflix India</p>
+                        </div>
+                      </div>
                   </div>
+                    <div class="col">
+                        <div class="card h-100">
+                          <a href="https://www.youtube.com/watch?v=J90eAAZaDRU" target="_blank"><img src="./img/surma.png" class="card-img-top" alt="..."></a>
+                          <div class="card-body">
+                            <img src="./img/gurur.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">Tower ke liye Meeting Meeting</b>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                          <div class="card h-100">
+                            <a href="https://www.youtube.com/watch?v=TAqmVWB-Ils" target="_blank"><img src="./img/guruji.jpg" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <img src="./img/guru.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">Airpods Max</b>
+                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="card h-100">
+                            <a href="https://www.youtube.com/watch?v=5cjP0CWWOUw" target="_blank"><img src="./img/triggered.jpg" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <img src="./img/tri.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">India's Smartest Student - Exam Meme Review</b>
+                              <p class="card-text">My name is Nischay Malhan. I'm from Delhi and I'm an engineering student. Now I am pursuing youtube Full Time. I make family friendly clean comedy videos on this channel for everyone to enjoy with their family. You don't need earphones to watch my videos😂
+                                .</p>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100">
+                          <a href="player4.html" target="_blank"><img src="./img/radhe.jpg" class="card-img-top" alt="..."></a>
+                          <div class="card-body">
+                            <img src="./img/narci.jpg"height="34px" width="34px" class="rounded-circle mx-3" alt=""><b class="card-title">Govinda Radhe
+                            <p class="card-text">Music , videos </p>
+                          </div>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
-
-                <div class="col">
-                  <div class="card h-100">
-                    <a href ="video/videoplayback (1).mp4" target_blank> <img src="./img/z5k4rW3lGhE-HD.jpg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                      <h5 class="card-title">Tuition Badmashi Kaa song</h5>
-                      <p class="card-text">Tuition Badmashi Kaa - Hemant Faujdar, Kiran, Masoom Sharma, Manisha Sharma, Mukesh Jaji, Aman Jaji</p>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="col">
-                  <div class="card h-100">
-                    <a href ="video/Surma Surma.mp4" target_blank> <img src="./img/Ut4RpySLM6Y-HD.jpg" class="card-img-top" alt="..."></a>
-                    <div class="card-body">
-                      <h5 class="card-title">HTML in 9 Minutes (in Hindi)</h5>
-                      <p class="card-text">Learn HTML & CSS in 60 Minutes | Full Beginners Course Video With Practicals</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/pal.mp4" target_blank> <img src="./img/o3DukCgvUg0-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">Bootstrap 5 Tutorial for Beginners  </h5>
-                        <p class="card-text">Bootstrap 5 Tutorial for Beginners | Bootstrap CSS Framework Full Course - FREE 🔥</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/Surma Surma.mp4" target_blank> <img src="./img/OWnaMCCxBPc-HD.jpg" class="card-img-top" alt=".."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">Bootstrap Tutorial in Hindi  </h5>
-                        <p class="card-text">Bootstrap Tutorial in Hindi | Complete Tutorial in 1 Video and Fast way</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/Rait Zara Si.mp4" target_blank> <img src="./img/OpWjt_wbV4E-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">CSS Complete Course (2024) for Beginners</h5>
-                        <p class="card-text">🚀 🔥 CSS Complete Course (2024) for Beginners | Myntra Project | Notes | GitHub | Certification</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/meeting.mp4" target_blank> <img src="./img/vQcHPQJ4Ujs-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">What is Web Development ? Complete RoadMap from Basics to Advanced |</h5>
-                        <p class="card-text">Which one to Choose - Web Development vs App Development ?</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/bbkivines.mp4" target_blank> <img src="./img/z5k4rW3lGhE-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">Tuition Badmashi Kaa song</h5>
-                        <p class="card-text">Tuition Badmashi Kaa - Hemant Faujdar, Kiran, Masoom Sharma, Manisha Sharma, Mukesh Jaji, Aman Jaji</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/Rait Zara Si.mp4" target_blank> <img src="./img/muds1gFUTN8-HD (2).jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">Desi Crew   song</h5>
-                        <p class="card-text">Aam Jahe Munde | Parmish Verma feat Pardhaan | Desi Crew | Laddi Chahal</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/Surma Surma.mp4" target_blank> <img src="./img/pa0Aw_gZ4cU-HD (1).jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">NEW TRENDING SONG </h5>
-                        <p class="card-text">MILLIONAIRE SONG (FULL VIDEO): @YoYoHoneySingh | GLORY| NEW TRENDING SONG 🔥</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/Surma Surma.mp4" target_blank> <img src="./img/QRlHdQaTUKo-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title"> New Punjabi Song 2024</h5>
-                        <p class="card-text">Dil Jatt Da (Official Video) Harjind Randhawa | Touchwood Productions | New Punjabi Song 2024</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/shradha.mp4" target_blank> <img src="./img/o3DukCgvUg0-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">Bootstrap 5 Tutorial for Beginners  </h5>
-                        <p class="card-text">Bootstrap 5 Tutorial for Beginners | Bootstrap CSS Framework Full Course - FREE 🔥</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/shradha.mp4" target_blank> <img src="./img/Ut4RpySLM6Y-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">HTML in 9 Minutes (in Hindi)</h5>
-                        <p class="card-text">Learn HTML & CSS in 60 Minutes | Full Beginners Course Video With Practicals</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/videoplayback (1).mp4" target_blank> <img src="./img/OWnaMCCxBPc-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">Bootstrap Tutorial in Hindi  </h5>
-                        <p class="card-text">Bootstrap Tutorial in Hindi | Complete Tutorial in 1 Video and Fast way</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/videoplayback (1).mp4" target_blank> <img src="./img/pa0Aw_gZ4cU-HD (1).jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">NEW TRENDING SONG </h5>
-                        <p class="card-text">MILLIONAIRE SONG (FULL VIDEO): @YoYoHoneySingh | GLORY| NEW TRENDING SONG 🔥</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/videoplayback (1).mp4" target_blank> <img src="./img/7lollzFclSM-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">Tandav (Title Track) song|</h5>
-                        <p class="card-text">Official Visualiser | Indian Anime Series | Anime song | Tandav Full Song</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/meeting.mp4" target_blank> <img src="./img/Ut4RpySLM6Y-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">HTML in 9 Minutes (in Hindi)</h5>
-                        <p class="card-text">Learn HTML & CSS in 60 Minutes | Full Beginners Course Video With Practicals</p>
-                      </div>
-                    </div>
-                  </div>
-  
-
-
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/Rait Zara Si.mp4" target_blank> <img src="./img/YxWlaYCA8MU-HD (2).jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">Jhoome Jo Pathaan Song </h5>
-                        <p class="card-text">Jhoome Jo Pathaan Song | Shah Rukh Khan, Deepika | Vishal & Sheykhar, Arijit Singh, Sukriti, Kumaar</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-                  <div class="col">
-                    <div class="card h-100">
-                      <a href ="video/Surma Surma.mp4" target_blank> <img src="./img/nAVY8d8hWL8-HD.jpg" class="card-img-top" alt="..."></a>
-                      <div class="card-body">
-                        <h5 class="card-title">HALDIGHATI RAP 2</h5>
-                        <p class="card-text">HALDIGHATI RAP 2 - BHUVI | घास की रोटी | Maharana Pratap Song</p>
-                      </div>
-                    </div>
-                  </div>
-
-
-            </div> 
-              
-            
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-         </div>
-         <!-- main row end -->
+                <!-- <img src="./img/shorts1.png" height="25px" width="24px" class="my-3" alt=""><b style="color: black; font-size: 20px;">Shorts</b> -->
+                
+        </div>
+        
+        <!-- main end -->
     </div>
-    <!-- Outer End -->
-
+    <!-- outer end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.js"></script>
+
+</body>
 </html>
+
